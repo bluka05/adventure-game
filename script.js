@@ -40,7 +40,29 @@ function renderQuestion() {
 
         addAnswerButton("Study Opponent", "studyOpponent");
         addAnswerButton("Relax", "relax");
+    } else if (currentState === "shootTraining") {
+        questionText.textContent = "Your shooting improves. In the group stage, the score is tied in the final minute.";
+
+        addAnswerButton("Shoot", "shootMatch");
+        addAnswerButton("Pass", "passMatch");
+    } else if (currentState === "passTraining") {
+        questionText.textContent = "Your passing improves. A teammate runs into open space during the match.";
+
+        addAnswerButton("Cross", "crossBall");
+        addAnswerButton("Through Ball", "throughBall");
+    } else if (currentState === "studyOpponent") {
+        questionText.textContent = "You study the goalkeeper and notice he struggles with low shots.";
+
+        addAnswerButton("Aim Left", "aimLeft");
+        addAnswerButton("Aim Right", "aimRight");
+    } else if (currentState === "relax") {
+        questionText.textContent = "You feel rested and calm. The match is close and your team needs a leader.";
+
+        addAnswerButton("Attack", "attack");
+        addAnswerButton("Defend", "defend")
     }
+
+
 }
 
 renderQuestion();

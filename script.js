@@ -60,6 +60,26 @@ function renderQuestion() {
 
         addAnswerButton("Attack", "attack");
         addAnswerButton("Defend", "defend")
+    } else if (currentState === "shootMatch") {
+        questionText.textContent = "You score the winning goal. Your team reaches the World Cup Final.";
+
+        addAnswerButton("Take Penalty", "takePenalty");
+        addAnswerButton("Let Captain Shoot", "captainShoot");
+    } else if (currentState === "passMatch") {
+        questionText.textContent = "Your teammate scores from your pass. Your teamwork sends the team to the final.";
+
+        addAnswerButton("Encourage Team", "teamHero");
+        addAnswerButton("Stay Focused", "finalFocus");
+    } else if (currentState === "crossBall") {
+        questionText.textContent = "Your cross creates a goal. The stadium explodes with cheers.";
+
+        addAnswerButton("Take Penalty", "takePenalty");
+        addAnswerButton("Let Captain Shoot", "captainShoot");
+    } else if (currentState === "throughBall") {
+        questionText.textContent = "Your through ball becomes the assist of the tournament.";
+
+        addAnswerButton("Encourage Team", "teamHero");
+        addAnswerButton("Stay Focused", "finalFocus");
     }
 
 

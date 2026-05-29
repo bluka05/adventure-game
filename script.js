@@ -95,6 +95,42 @@ function renderQuestion() {
 
         addAnswerButton("Take Penalty", "takePenalty");
         addAnswerButton("Let Captain Shoot", "captainShoot");
+    }  else if (currentState === "defend") {
+        questionText.textContent = "You defend bravely and protect the lead.";
+
+        addAnswerButton("Encourage Team", "teamHero");
+        addAnswerButton("Stay Focused", "finalFocus");
+    } else if (currentState === "takePenalty") {
+        questionText.textContent = "The stadium becomes silent. You step up for the deciding penalty.";
+
+        addAnswerButton("Left Corner", "championEnding");
+        addAnswerButton("Right Corner", "mvpEnding");
+    } else if (currentState === "captainShoot") {
+        questionText.textContent = "You trust your captain and support your teammates from the halfway line.";
+
+        addAnswerButton("Encourage Team", "teamHero");
+        addAnswerButton("Stay Focused", "runnerUp");
+    } else if (currentState === "finalFocus") {
+        questionText.textContent = "You stay focused during the final moments of the match.";
+
+        addAnswerButton("Lift Trophy", "championEnding");
+        addAnswerButton("Celebrate Team", "teamHero");
+    } else if (currentState === "championEnding") {
+        questionText.textContent = "Ending: World Cup Champion! Your team wins the FIFA World Cup.";
+
+        addAnswerButton("Play Again", "start");
+    } else if (currentState === "mvpEnding") {
+        questionText.textContent = "Ending: Tournament MVP! You become the best player of the tournament.";
+
+        addAnswerButton("Play Again", "start");
+    } else if (currentState === "teamHero") {
+        questionText.textContent = "Ending: Team Hero. Your leadership inspires your country.";
+
+        addAnswerButton("Play Again", "start");
+    } else if (currentState === "runnerUp") {
+        questionText.textContent = "Ending: Runner-Up. Your team reaches the final and earns respect.";
+
+        addAnswerButton("Play Again", "start");
     }
 
 }

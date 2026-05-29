@@ -45,11 +45,15 @@ button {
 
     font-size: 1rem;
     color: white;
-    background-color: #2e9e44;
+    background-color: #1f7a35;
+
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #237a35;
+    background-color: #155724;
 }
 
 button:focus {

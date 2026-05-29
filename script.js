@@ -1,7 +1,7 @@
 let currentState = "start";
 
 const questionText = document.getElementById("story-text");
-const choicesContainer = document.getElementById("choices-container");
+const answersContainer = document.getElementById("choices-container");
 
 function clearAnswers() {
     while (answersContainer.firstChild) {

@@ -1,10 +1,18 @@
 let currentState = "start";
 
-const storyText = document.getElementById("story-text");
+const questionText = document.getElementById("story-text");
 const choicesContainer = document.getElementById("choices-container");
 
-function renderStory() {
-    storyText.textContent = "The World Cup is about to begin. What do you do?";
+function clearAnswers() {
+    while (answersContainer.firstChild) {
+        answersContainer.removeChild(answersContainer.firstChild);
+    }
 }
 
-renderStory();
+function renderQuestion() {
+    clearAnswers();
+    
+    questionText.textContent = "The World Cup is about to begin. What do you do?";
+}
+
+renderQuestion();

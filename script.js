@@ -80,8 +80,22 @@ function renderQuestion() {
 
         addAnswerButton("Encourage Team", "teamHero");
         addAnswerButton("Stay Focused", "finalFocus");
-    }
+    } else if (currentState === "aimLeft") {
+        questionText.textContent = "You aim left and score. Your smart preparation helps your team reach the final.";
 
+        addAnswerButton("Take Penalty", "takePenalty");
+        addAnswerButton("Let Captain Shoot", "captainShoot");
+    } else if (currentState === "aimRight") {
+        questionText.textContent = "The goalkeeper saves your shot, but your team keeps fighting and reaches the final.";
+
+        addAnswerButton("Encourage Team", "teamHero");
+        addAnswerButton("Stay Focused", "finalFocus");
+    } else if (currentState === "attack") {
+        questionText.textContent = "You push forward and help your team score an important goal.";
+
+        addAnswerButton("Take Penalty", "takePenalty");
+        addAnswerButton("Let Captain Shoot", "captainShoot");
+    }
 
 }
 

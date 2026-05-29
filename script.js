@@ -18,9 +18,7 @@ function addAnswerButton(answerText, nextState) {
     });
 
     answersContainer.appendChild(button);
-
 }
-
 
 function renderQuestion() {
     clearAnswers();

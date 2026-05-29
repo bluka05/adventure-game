@@ -25,11 +25,22 @@ function addAnswerButton(answerText, nextState) {
 function renderQuestion() {
     clearAnswers();
 
+    if (currentState === "start") {
     questionText.textContent = "The World Cup is about to begin. What do you do?";
 
     addAnswerButton("Practice", "practice");
     addAnswerButton("Rest", "rest");
+    } else if (currentState === "practice") {
+        questionText.textContent = "You stay after training. The coach asks what skill you want to improve.";
 
+        addAnswerButton("Shoot", "shootTraining");
+        addAnswerButton("Pass", "passTraining");
+    } else if (currentState === "rest") {
+        questionText.textContent = "You return to your room to recover before the match.";
+
+        addAnswerButton("Study Opponent", "studyOpponent");
+        addAnswerButton("Relax", "relax");
+    }
 }
 
 renderQuestion();
